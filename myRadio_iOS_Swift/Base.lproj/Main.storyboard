@@ -1,24 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myRadio_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your URL or select radio stantion " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0i-iX-buR">
+                                <rect key="frame" x="8" y="52" width="398" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="URL: Radio stantion" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ac2-nf-I7f">
+                                <rect key="frame" x="8" y="80.5" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SND-xX-loF">
+                                <rect key="frame" x="0.0" y="122.5" width="414" height="692.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StationCell" rowHeight="90" id="TEY-4e-q6L" customClass="StationTableViewCell" customModule="myRadio_iOS_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TEY-4e-q6L" id="60f-8t-hVC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stationImage" translatesAutoresizingMaskIntoConstraints="NO" id="smX-Lm-tTG">
+                                                    <rect key="frame" x="8" y="8" width="120" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="2uy-Qb-XzC"/>
+                                                        <constraint firstAttribute="width" constant="120" id="qL5-mo-wAN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vc4-xs-ace" userLabel="Labels Stack View">
+                                                    <rect key="frame" x="136" y="22" width="250" height="47"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Station Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Beu-JO-rGB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="250" height="21"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqg-pm-SO6">
+                                                            <rect key="frame" x="0.0" y="29" width="250" height="18"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Gqg-pm-SO6" firstAttribute="top" secondItem="Beu-JO-rGB" secondAttribute="bottom" constant="8" symbolic="YES" id="Hub-kH-g8c"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                            <constraints>
+                                                <constraint firstItem="smX-Lm-tTG" firstAttribute="leading" secondItem="60f-8t-hVC" secondAttribute="leading" constant="8" id="2MK-Hi-LZX"/>
+                                                <constraint firstItem="vc4-xs-ace" firstAttribute="leading" secondItem="smX-Lm-tTG" secondAttribute="trailing" constant="8" id="BKJ-qA-0rH"/>
+                                                <constraint firstItem="smX-Lm-tTG" firstAttribute="top" secondItem="60f-8t-hVC" secondAttribute="top" constant="8" id="Bdh-UY-OEL"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vc4-xs-ace" secondAttribute="trailing" constant="8" id="BvX-pG-YD6"/>
+                                                <constraint firstItem="Gqg-pm-SO6" firstAttribute="leading" secondItem="smX-Lm-tTG" secondAttribute="trailing" constant="8" symbolic="YES" id="TgO-Hp-my7"/>
+                                                <constraint firstItem="vc4-xs-ace" firstAttribute="centerY" secondItem="smX-Lm-tTG" secondAttribute="centerY" id="aZ1-Tj-VLA"/>
+                                                <constraint firstItem="Beu-JO-rGB" firstAttribute="leading" secondItem="smX-Lm-tTG" secondAttribute="trailing" constant="8" symbolic="YES" id="jTS-1V-pCg"/>
+                                                <constraint firstItem="smX-Lm-tTG" firstAttribute="top" secondItem="Beu-JO-rGB" secondAttribute="bottom" constant="-35" id="uEu-ua-HEX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.1175440177" green="0.11671449239999999" blue="0.1412996352" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="stationDescLabel" destination="Gqg-pm-SO6" id="IXt-ri-aAq"/>
+                                            <outlet property="stationImageView" destination="smX-Lm-tTG" id="KfY-Rw-Lb7"/>
+                                            <outlet property="stationNameLabel" destination="Beu-JO-rGB" id="pxV-cR-5v5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6B6-tj-OAP"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DLP-YX-9ZX"/>
+                                </connections>
+                            </tableView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="on / off" translatesAutoresizingMaskIntoConstraints="NO" id="0wb-pF-jG3">
+                                <rect key="frame" x="182.5" y="823" width="51" height="31"/>
+                                <connections>
+                                    <action selector="didToggleRadio:" destination="BYZ-38-t0r" eventType="valueChanged" id="QqP-c3-U3d"/>
+                                </connections>
+                            </switch>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SND-xX-loF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AGr-Hc-Jwx"/>
+                            <constraint firstItem="M0i-iX-buR" firstAttribute="leading" secondItem="Ac2-nf-I7f" secondAttribute="leading" id="AUW-B1-KcX"/>
+                            <constraint firstItem="M0i-iX-buR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="BLw-z7-4yL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SND-xX-loF" secondAttribute="trailing" id="ErO-uR-rZO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0wb-pF-jG3" secondAttribute="bottom" constant="8" id="FRf-Ck-V32"/>
+                            <constraint firstItem="SND-xX-loF" firstAttribute="top" secondItem="Ac2-nf-I7f" secondAttribute="bottom" constant="8" id="Ind-I8-wBd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M0i-iX-buR" secondAttribute="trailing" constant="8" id="JCV-lg-IEW"/>
+                            <constraint firstItem="0wb-pF-jG3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SL9-B7-vzr"/>
+                            <constraint firstItem="M0i-iX-buR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Ypz-qD-FTn"/>
+                            <constraint firstItem="Ac2-nf-I7f" firstAttribute="top" secondItem="M0i-iX-buR" secondAttribute="bottom" constant="8" symbolic="YES" id="gw8-jn-weQ"/>
+                            <constraint firstItem="M0i-iX-buR" firstAttribute="trailing" secondItem="Ac2-nf-I7f" secondAttribute="trailing" id="jtF-7r-8OJ"/>
+                            <constraint firstItem="0wb-pF-jG3" firstAttribute="top" secondItem="SND-xX-loF" secondAttribute="bottom" constant="8" id="uKI-GP-vpl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="switchOnOff" destination="0wb-pF-jG3" id="7eR-M4-92j"/>
+                        <outlet property="tableView" destination="SND-xX-loF" id="tBg-rT-ZCz"/>
+                        <outlet property="urlTextField" destination="Ac2-nf-I7f" id="MT0-m3-iie"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="43" y="77"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="stationImage" width="120" height="75"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

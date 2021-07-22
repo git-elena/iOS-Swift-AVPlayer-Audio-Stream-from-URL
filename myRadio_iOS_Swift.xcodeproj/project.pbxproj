@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C4ED58B26AA21710095137C /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4ED58A26AA21710095137C /* StationTableViewCell.swift */; };
+		6C4ED59E26AA236A0095137C /* RadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4ED59D26AA236A0095137C /* RadioStation.swift */; };
+		6C4ED59F26AA236A0095137C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4ED59C26AA236A0095137C /* DataManager.swift */; };
+		6C4ED5AC26AA26430095137C /* Radio_AVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4ED5AB26AA26430095137C /* Radio_AVPlayer.swift */; };
+		6C4ED5C326AA38EE0095137C /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 6C4ED5C226AA38EE0095137C /* stations.json */; };
 		6C8A3715269FD6E4001BDE37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A3714269FD6E4001BDE37 /* AppDelegate.swift */; };
 		6C8A3717269FD6E4001BDE37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A3716269FD6E4001BDE37 /* SceneDelegate.swift */; };
 		6C8A3719269FD6E4001BDE37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A3718269FD6E4001BDE37 /* ViewController.swift */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C4ED58A26AA21710095137C /* StationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
+		6C4ED59C26AA236A0095137C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		6C4ED59D26AA236A0095137C /* RadioStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioStation.swift; sourceTree = "<group>"; };
+		6C4ED5AB26AA26430095137C /* Radio_AVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radio_AVPlayer.swift; sourceTree = "<group>"; };
+		6C4ED5C226AA38EE0095137C /* stations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
 		6C8A3711269FD6E4001BDE37 /* myRadio_iOS_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myRadio_iOS_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C8A3714269FD6E4001BDE37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C8A3716269FD6E4001BDE37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +86,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C4ED58926AA16D60095137C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6C4ED58A26AA21710095137C /* StationTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6C4ED59526AA227C0095137C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6C4ED5C226AA38EE0095137C /* stations.json */,
+				6C4ED59C26AA236A0095137C /* DataManager.swift */,
+				6C4ED59D26AA236A0095137C /* RadioStation.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		6C8A3708269FD6E4001BDE37 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +127,12 @@
 		6C8A3713269FD6E4001BDE37 /* myRadio_iOS_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				6C8A3718269FD6E4001BDE37 /* ViewController.swift */,
+				6C4ED5AB26AA26430095137C /* Radio_AVPlayer.swift */,
+				6C4ED59526AA227C0095137C /* Data */,
+				6C4ED58926AA16D60095137C /* Cells */,
 				6C8A3714269FD6E4001BDE37 /* AppDelegate.swift */,
 				6C8A3716269FD6E4001BDE37 /* SceneDelegate.swift */,
-				6C8A3718269FD6E4001BDE37 /* ViewController.swift */,
 				6C8A371A269FD6E4001BDE37 /* Main.storyboard */,
 				6C8A371D269FD6E7001BDE37 /* Assets.xcassets */,
 				6C8A371F269FD6E7001BDE37 /* LaunchScreen.storyboard */,
@@ -233,6 +264,7 @@
 			files = (
 				6C8A3721269FD6E7001BDE37 /* LaunchScreen.storyboard in Resources */,
 				6C8A371E269FD6E7001BDE37 /* Assets.xcassets in Resources */,
+				6C4ED5C326AA38EE0095137C /* stations.json in Resources */,
 				6C8A371C269FD6E4001BDE37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C8A3719269FD6E4001BDE37 /* ViewController.swift in Sources */,
+				6C4ED59F26AA236A0095137C /* DataManager.swift in Sources */,
+				6C4ED58B26AA21710095137C /* StationTableViewCell.swift in Sources */,
 				6C8A3715269FD6E4001BDE37 /* AppDelegate.swift in Sources */,
+				6C4ED59E26AA236A0095137C /* RadioStation.swift in Sources */,
 				6C8A3717269FD6E4001BDE37 /* SceneDelegate.swift in Sources */,
+				6C4ED5AC26AA26430095137C /* Radio_AVPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -421,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
